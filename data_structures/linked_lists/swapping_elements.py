@@ -1,4 +1,4 @@
-from linked_list import LinkedList, Node
+from linked_list import LinkedList
 
 
 def swap_nodes(input_list, val1, val2):
