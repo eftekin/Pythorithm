@@ -25,5 +25,5 @@ def generate_test_linked_list():
 
 test_list = generate_test_linked_list()
 print(test_list.stringify_list())
-nth_last = nth_last_node(test_list, 4)
+nth_last = nth_last_node(test_list, 10)
 print(nth_last.value)
