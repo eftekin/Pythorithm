@@ -29,7 +29,7 @@ class LinkedList:
         string_list = ""
         current_node = self.get_head_node()
         while current_node:
-            if current_node.get_value() != None:  # noqa: E711
+            if current_node.get_value() is None:
                 string_list += str(current_node.get_value()) + "\n"
             current_node = current_node.get_next_node()
         return string_list
