@@ -1,0 +1,13 @@
+2024-10-17 13:46:13,668 - INFO - BankAccount initialized with balance: 100
+2024-10-17 13:46:15,452 - INFO - User successfully authenticated.
+2024-10-17 13:46:31,116 - INFO - 
+Transaction Type: Deposit
+2024-10-17 13:46:31,116 - INFO - Amount: 600.0
+2024-10-17 13:46:31,116 - INFO - Status: Successful
+2024-10-17 13:46:31,116 - INFO - Transaction # 643991
+2024-10-17 13:46:35,126 - INFO - 
+Transaction Type: Withdraw
+2024-10-17 13:46:35,126 - INFO - Amount: 700.0
+2024-10-17 13:46:35,126 - INFO - Status: Successful
+2024-10-17 13:46:35,126 - INFO - Transaction # 794779
+2024-10-17 13:46:35,127 - INFO - Displayed current balance: 0.0
