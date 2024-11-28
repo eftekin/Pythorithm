@@ -1,18 +1,21 @@
 # Pythorithm 🐍
 
-Welcome to Pythorithm! This repository documents my journey of learning data structures and algorithms with Python. I am using resources like Codecademy's course and the book 'Introduction to Algorithms'.
+**Pythorithm** is a Python-based repository documenting my journey of learning **data structures** and **algorithms** through hands-on coding and problem-solving challenges.
 
 ## 📚 Contents
 
-- **Data Structures:** Python implementations of various data structures.
-- **Algorithms:** Python implementations of algorithms.
-- **Supplementary Materials:** Additional learning resources and notes.
+1. **Data Structures**  
+   Implementation of arrays, linked lists, stacks, queues, and trees.
 
-## 🔗 Learning Resources
+2. **Algorithms**  
+   Python implementations of sorting, searching, recursion, and graph algorithms.
 
-- [Codecademy Course](https://www.codecademy.com/learn/learn-data-structures-and-algorithms-with-python)
-- [Introduction to Algorithms](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
+3. **Challenges**  
+   Problem-solving exercises and their solutions.
 
-#
+4. **Notes**  
+   Concise learning summaries and resource references.
 
-Feel free to explore the code and materials. Contributions and feedback are welcome!
+## 🤝 Contributions
+
+Contributions are welcome! Feel free to submit issues or pull requests to help improve this repository.
