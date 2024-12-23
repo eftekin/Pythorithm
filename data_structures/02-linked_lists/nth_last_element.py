@@ -1,7 +1,19 @@
 from linked_list import LinkedList
 
-
 def nth_last_node(linked_list, n):
+    """
+    Find the nth last node in a linked list.
+    
+    Args:
+        linked_list: LinkedList object
+        n: Position from the end (1-based)
+    
+    Returns:
+        Node: The nth last node or None if not found
+    """
+    if not linked_list or not linked_list.head_node or n < 1:
+        return None
+
     current = None
     tail_seeker = linked_list.head_node
     count = 0

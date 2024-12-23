@@ -1,7 +1,21 @@
 from linked_list import LinkedList
 
-
 def swap_nodes(input_list, val1, val2):
+    """
+    Swap two nodes in a linked list by their values.
+    
+    Args:
+        input_list: LinkedList object
+        val1: Value of first node to swap
+        val2: Value of second node to swap
+    
+    Returns:
+        None
+    """
+    if not input_list or not input_list.head_node:
+        print("Empty list - no swap needed")
+        return
+
     print(f"Swapping {val1} with {val2}")
 
     node1_prev = None

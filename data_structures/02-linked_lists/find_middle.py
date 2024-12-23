@@ -2,6 +2,18 @@ from linked_list import LinkedList
 
 
 def find_middle(linked_list):
+    """
+    Find the middle node of a linked list using fast and slow pointers.
+    
+    Args:
+        linked_list: LinkedList object
+    
+    Returns:
+        Node: The middle node of the linked list
+    """
+    if not linked_list or not linked_list.head_node:
+        return None
+    
     fast = linked_list.head_node
     slow = linked_list.head_node
     while fast:

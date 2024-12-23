@@ -84,6 +84,9 @@ class DoublyLinkedList:
         return removed_tail.get_value()
 
     def remove_by_value(self, value_to_remove):
+        if not self.head_node:
+            return None
+
         node_to_remove = None
         current_node = self.head_node
 
@@ -109,29 +112,37 @@ class DoublyLinkedList:
         return node_to_remove
 
     def stringify_list(self):
-        current_node = self.head_node
-        while current_node is not None:
-            print(current_node.get_value(), end=" <-> ")
-            current_node = current_node.get_next_node()
+        if not self.head_node:
+            return "Empty list"
+            
+        result = ""
+        current = self.head_node
+        while current:
+            result += f"{current.get_value()} <-> "
+            current = current.get_next_node()
+        return result + "None"
 
 
-subway = DoublyLinkedList()
+# Test code
+def test_doubly_linked_list():
+    dll = DoublyLinkedList()
+    dll.add_to_head("Times Square")
+    dll.add_to_head("Grand Central")
+    dll.add_to_head("Central Park")
 
-subway.add_to_head("Times Square")
-subway.add_to_head("Grand Central")
-subway.add_to_head("Central Park")
+    print(dll.stringify_list())
 
-print(subway.stringify_list())
+    dll.add_to_tail("Penn Station")
+    dll.add_to_tail("Wall Street")
+    dll.add_to_tail("Brooklyn Bridge")
 
-subway.add_to_tail("Penn Station")
-subway.add_to_tail("Wall Street")
-subway.add_to_tail("Brooklyn Bridge")
+    print(dll.stringify_list())
 
-print(subway.stringify_list())
+    dll.remove_head()
+    dll.remove_tail()
+    print(dll.stringify_list())
 
-subway.remove_head()
-subway.remove_tail()
-print(subway.stringify_list())
+    dll.remove_by_value("Times Square")
+    print(dll.stringify_list())
 
-subway.remove_by_value("Times Square")
-print(subway.stringify_list())
+test_doubly_linked_list()

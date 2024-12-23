@@ -1,5 +1,6 @@
 class Node:
     def __init__(self, value, next_node=None):
+        """Initialize a node with a value and optional next node."""
         self.value = value
         self.next_node = next_node
 
@@ -15,7 +16,8 @@ class Node:
 
 class LinkedList:
     def __init__(self, value=None):
-        self.head_node = Node(value)
+        """Initialize a linked list with an optional initial value."""
+        self.head_node = Node(value) if value is not None else None
 
     def get_head_node(self):
         return self.head_node
@@ -26,15 +28,21 @@ class LinkedList:
         self.head_node = new_node
 
     def stringify_list(self):
+        """Convert the linked list to a string representation."""
+        if not self.head_node:
+            return "Empty list"
+        
         string_list = ""
-        current_node = self.get_head_node()
-        while current_node:
-            if current_node.get_value() is None:
-                string_list += str(current_node.get_value()) + "\n"
-            current_node = current_node.get_next_node()
-        return string_list
+        current = self.head_node
+        while current:
+            string_list += f"{current.get_value()} -> "
+            current = current.get_next_node()
+        return string_list + "None"
 
     def remove_node(self, value_to_remove):
+        if not self.head_node:
+            return
+            
         current_node = self.get_head_node()
         if current_node.get_value() == value_to_remove:
             self.head_node = current_node.get_next_node()
