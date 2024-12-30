@@ -16,7 +16,7 @@ stacks.append(right_stack)
 num_disks = int(input("How many disks do you want to play with?\n"))
 
 while num_disks < 3:
-    int(input("Enter a number greater than 3\n"))
+    num_disks = int(input("Enter a number greater than 3\n"))
 
 for i in range(num_disks, 0, -1):
     left_stack.push(i)
@@ -59,6 +59,8 @@ while right_stack.get_size() != num_disks:
 
         if from_stack.get_size() == 0:
             print("\n\nInvalid Move. Try Again!")
+        elif to_stack.is_full():
+            print("Invalid Move. The stack is full. Try Again")
         elif to_stack.get_size() == 0 or from_stack.peek() < to_stack.peek():
             disk = from_stack.pop()
             to_stack.push(disk)

@@ -36,6 +36,9 @@ class Stack:
     def is_empty(self):
         return self.size == 0
 
+    def is_full(self):
+        return self.size >= self.limit
+
     def get_size(self):
         return self.size
 
